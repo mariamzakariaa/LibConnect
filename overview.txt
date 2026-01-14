@@ -1,0 +1,56 @@
+Brief Description:
+
+This project is a library management system that allows students to search, borrow, and 
+return books using a Kaggle dataset stored in a CSV file. Structures manage book data (title, author, category, year, rating, availability), and students log in 
+with encrypted IDs linked to their borrowed books. The system uses dynamic memory allocation, 2D arrays to track borrowed books per student, and file handling 
+to persist data. Searching is primarily done via linear search, while top-rated book recommendations are managed using a circular linked list (RecNode) and 
+can be efficiently navigated using jump search. Borrowed books are updated in real time, and the text-based menu (recursion) 
+allows searching, borrowing, returning, and viewing books. Utility functions handle string cleaning, ID encryption/decryption, and consistent data processing.
+
+----------------------------------------------------------------------------------------------------
+
+Topics included:
+1. Linear/Binary Search :
+--> Binary Search: (students.cpp) Used in login() to check if the entered student ID exists in the sorted studentIDInts array.
+--> Linear Search: (utils.cpp) used in findBookByISBN() to find a book by its ISBN for the borrowing history feature
+
+2. Bubble Sorting:
+--> (students.cpp) in sortDecrypted() for sorting studentIDInts array for binary search
+
+3. 2D Arrays:
+--> (main.cpp) the borrowedBooks[MAX_USERS][MAX_BORROWED] array for storing which student has borrowed.
+--> (books.cpp) in handleBorrow(), showBorrowedBooks(), and returnBook() to track borrowed books per user.
+
+4. Pointers and Dynamic Allocation:
+--> (books.cpp) in parseField fuction for CSV parsing.
+--> (main.cpp) dynamically allocated memory for books array.
+
+5. Strings:
+--> (utils.cpp) for ID encryption and decryption.
+--> (books.cpp) for CSV field parsing in parseField function.
+--> (search.cpp) for displaying and searching in books (by title or category, ...).
+--> Used strcpy, strcat, strcmp, strncpy (string copy with limit) in multiple files too.
+
+6. Recursion:
+--> (main.cpp) the main menu calls itself until the user exits
+
+7. Structures:
+--> (books.h) (books.cpp) struct books stores book data and used in books functions in books.cpp
+
+8. Files:
+--> (books.cpp) 
+	- loaded books.csv in loadBooks() and saved in saveBooks()
+	- used borrowed.csv to append in saveBorrow(), read in loadUserBorrows(), update in removeBorrow() 
+
+Extra Topics:
+1. Linked Lists:
+--> (recommendations.cpp) 
+--> used a circular linked list (RecNode) to store top-rated books dynamically
+--> nodes store pointers to book structures, enabling iteration through recommendations one by one and looping 
+back to the first book.
+
+2. Jump Search:
+--> (recommendations.cpp)
+--> searches through recommendations by jumping ahead in fixed steps and then performing a linear scan within blocks, 
+providing a more efficient approach than plain linear search.
+

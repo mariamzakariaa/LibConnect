@@ -1,0 +1,10 @@
+﻿  books.cpp
+  main.cpp
+C:\Users\maria\Downloads\LibConnect_CLI\books.cpp(45,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\maria\Downloads\LibConnect_CLI\books.cpp(85,62): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  recommendations.cpp
+  search.cpp
+  utils.cpp
+C:\Users\maria\Downloads\LibConnect_CLI\utils.cpp(19,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
+  applied-project-2.vcxproj -> C:\Users\maria\Downloads\LibConnect_CLI\x64\Debug\applied-project-2.exe
