@@ -1,0 +1,14 @@
+# Visual Studio cache and build folders
+.vs/
+x64/
+Debug/
+Release/
+
+# User-specific files
+*.vcxproj.user
+
+# OS
+Thumbs.db
+
+# Other temp/db files
+*.sqlite
